@@ -320,7 +320,7 @@ class ShowOff < Sinatra::Application
             # Add newline after the input so that users can
             # advance faster than the typewriter effect
             # and still keep inputs on separate lines.
-            code << "\n"
+            code << Nokogiri::XML::Text.new("\n", html)
 
             unless output.to_s.empty?
 
